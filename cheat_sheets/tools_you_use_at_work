@@ -1,0 +1,23 @@
+# Tools you use at work:
+- BugSnag
+- Apptentive
+- SendBird
+- Solr
+- slack
+- PractiTest
+- MixPanel
+- Google Analytics
+- xCode
+- Android Studio
+- Postman
+- GitHub
+
+# Commands to look up
+- Mobile:
+  Whack run start
+  react-native run-ios
+  react-native run-android
+  npm run clean
+  npm run clear-cache
+  npm run clean-all
+  pod install (inside the OS folder)
