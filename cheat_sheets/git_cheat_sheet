@@ -23,3 +23,5 @@ Pull the latest development build
 git pull origin <enter branch name>
 
 git stash
+
+git reset --hard origin/development
