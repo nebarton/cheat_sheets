@@ -1,14 +1,14 @@
 Terminal Cheat Sheet
 
 <modifying profile file>
-nano ~/.bash_profile 
+nano ~/.bash_profile
 Control + O to save, click Y, verify file name, click Control + X
 
 <reload Profile File>
 source ~/.bash_profile
 
-<Set ANDROID_HOME path> 
-echo export "ANDROID_HOME=/Users/yourName/Library/Android/sdk" >> ~/.bash_profile 
+<Set ANDROID_HOME path>
+echo export "ANDROID_HOME=/Users/yourName/Library/Android/sdk" >> ~/.bash_profile
 
 <Check ANDROID_HOME path>
 echo $ANDROID_HOME
@@ -23,7 +23,7 @@ Add the following to set BIN fo Java: export PATH=${JAVA_HOME}/bin:$PATH
 <set Maven Path>
 echo export "M2_HOME=/usr/local/Cellar/maven/3.5.3/libexec" >> ~/.bash_profile
 
-Remove directory: 
+Remove directory:
 rm -r mydir
 
 <iOS building locally>
@@ -31,5 +31,26 @@ rm -r mydir
 
 COMPILE NEW APP BUILDS
 - checkout the feature branch and within the buddy-front folder run the following command: ./scripts/start_jenkins_build.sh
-- OR in one command, specify the feature branch as a parameter: ./scripts/start_jenkins_build.sh <insert feature branch here> 
+- OR in one command, specify the feature branch as a parameter: ./scripts/start_jenkins_build.sh <insert feature branch here>
 	Example Command: ./scripts/start_jenkins_build.sh feature/MA-2088-request-sms-code-phone-verify
+
+
+	export JAVA_HOME=$(/usr/libexec/java_home)
+	Possibly need to add back to profile file 
+
+
+To change terminal colors: 
+
+Open Terminal and type nano .bash_profile
+Paste in the following lines:
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+alias ls='ls -GFh'
+
+Hit Control+O to save, then Control+X to exit out of nano
+The first line changes the bash prompt to be colorized, and rearranges the prompt to be “username@hostname:cwd $”
+
+The next two lines enable command line colors, and define colors for the ‘ls’ command
+
+Finally, we alias ls to include a few flags by default. -G colorizes output, -h makes sizes human readable, and -F throws a / after a directory, * after an executable, and a @ after a symlink, making it easier to quickly identify things in directory listings.

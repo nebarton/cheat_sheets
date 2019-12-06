@@ -1,0 +1,6 @@
+To access the database:
+
+psql    --host=staging-prometheus-east.cmcgttmeqhtc.us-east-1.rds.amazonaws.com    --port=5432    --username=prometheus    --password    --dbname=prometheus
+
+To see all of the tables: \dt
+To see a specific table: \d table_name and then \q to quit
